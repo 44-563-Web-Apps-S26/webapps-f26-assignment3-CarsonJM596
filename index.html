@@ -3,6 +3,13 @@
     <head>
         <title> My First Webpage!</title>
     </head>
+
+    <style>
+        table, th, td {
+        border:1px solid black;
+        }
+    </style>
+
     <body>
         <h1> Welcome to Carson Mallen's first webpage! </h1>
 
@@ -38,5 +45,58 @@
         <h2>
             <a href="myLocation.html">My favorite location</a>
         </h2>
+
+        <hr>
+        <h2>Places I'd like to visit</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Reason</th>
+                <th>Distance</th>
+                <th>Budget</th>
+            </tr>
+            <tr>
+                <td>Toyko</td>
+                <td>I wanna see the culture</td>
+                <td>6,100 miles	</td>
+                <td>$4,000</td>
+            </tr>
+            <tr>
+                <td>Germany</td>
+                <td>I have friends out there</td>
+                <td>4,900 miles</td>
+                <td>$4,000</td>
+            </tr>
+            <tr>
+                <td>Hawaii</td>
+                <td>I like the weather and the ocean</td>
+                <td>4,300 miles</td>
+                <td>$3,500</td>
+            </tr>
+            <tr>
+                <td>Mexico</td>
+                <td>I want to see what it's like</td>
+                <td>1,400 miles</td>
+                <td>$2,000</td>
+            </tr>
+        </table>
+
+        <hr>
+        <h2> My Code Snippet </h2>
+        <p>
+            Converts the given array elements into li tags and appends them to the list of the given id.
+            This allows us to list out certain things in JavaScript and show it in HTML.
+        </p>
+        <pre>
+            <code>
+                const arrayToHTMLList = (arr, listID) =>
+                    document.querySelector(`#${listID}`).innerHTML += arr
+                        .map(item =&gt; `&lt;li&gt;${item}&lt;/li&gt;`)
+                        .join('');
+            </code>
+        </pre>
+        <a href="https://shared.code.pieces.app/?compressed=eyJiYXNlIjoiaHR0cHM6Ly9qYXZhc2NyaXB0LnBpZWNlcy5jbG91ZCIsInNoYXJlIjoiYjI5YWE1YjAtODRkYS00ZjAwLThhM2MtOTU4NWExYjM5OWQ5IiwiYXNzZXQiOiJkMzYxYjkzZi0zOWIxLTQ4NmQtOTg1MC0zNzk5OWRlNzM5NzMiLCJuYW1lIjoiUGllY2VzIFRlYW0iLCJ0aXRsZSI6IkFycmF5IHRvIEhUTUwgbGlzdCIsImRlc2NyaXB0aW9uIjoiQ29udmVydHMgdGhlIGdpdmVuIGFycmF5IGVsZW1lbnRzIGludG8gPGxpPiB0YWdzIGFuZCBhcHBlbmRzIHRoZW0gdG8gdGhlIGxpc3Qgb2YgdGhlIGdpdmVuIGlkLiBGcm9tIFRoZSBQaWVjZXMgSmF2YVNjcmlwdCBDb2xsZWN0aW9uLiIsInVzZXIiOnsic2NoZW1hIjp7Im1pZ3JhdGlvbiI6MCwic2VtYW50aWMiOiJNQUpPUl8wX01JTk9SXzBfUEFUQ0hfMSJ9LCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lrY1BjV3A2TnRkRl9BdUFJNmZ4RnJONFVoOUVUakRfcEZPTGxvPXM5Ni1jIiwiZW1haWwiOiJqYXZhc2NyaXB0LmNvbGxlY3Rpb25AcGllY2VzLmFwcCIsImNyZWF0ZWQiOnsidmFsdWUiOiIyMDIyLTA2LTIzVDE4OjQ1OjIzLjA1N1oiLCJyZWFkYWJsZSI6IjIgeWVhcnMgYWdvIn0sInVwZGF0ZWQiOnsidmFsdWUiOiIyMDIyLTA2LTIzVDE4OjQ1OjIzLjc0OFoiLCJyZWFkYWJsZSI6IjIgeWVhcnMgYWdvIn0sImlkIjoiYzY0MWE0YzQtYTkxYy00NmI4LTg2ZDItNjY5NjQyYTVkOTg1IiwibmFtZSI6IlBpZWNlcyBUZWFtIiwiYWVzdGhldGljcyI6eyJ0aGVtZSI6eyJkYXJrIjp0cnVlfSwiZm9udCI6eyJzaXplIjoxNn19LCJhbGxvY2F0aW9uIjp7InNjaGVtYSI6eyJtaWdyYXRpb24iOjAsInNlbWFudGljIjoiTUFKT1JfMF9NSU5PUl8wX1BBVENIXzEifSwiaWQiOiJjNjQxYTRjNC1hOTFjLTQ2YjgtODZkMi02Njk2NDJhNWQ5ODUiLCJ1c2VyIjoiYzY0MWE0YzQtYTkxYy00NmI4LTg2ZDItNjY5NjQyYTVkOTg1IiwidXJscyI6eyJiYXNlIjp7InN0YXR1cyI6IlJVTk5JTkciLCJ1cmwiOiJodHRwczovL3VzZXItYzY0MWE0YzQtYTkxYy00NmI4LTg2ZDItNjY5NjQyYTVkOTg1LWZoY21iaGVrbHEtdWMuYS5ydW4uYXBwIn0sImlkIjp7InN0YXR1cyI6IlJVTk5JTkciLCJ1cmwiOiJodHRwczovL2M2NDFhNGM0LWE5MWMtNDZiOC04NmQyLTY2OTY0MmE1ZDk4NS5waWVjZXMuY2xvdWQifSwidmFuaXR5Ijp7InN0YXR1cyI6IlJVTk5JTkciLCJ1cmwiOiJodHRwczovL2phdmFzY3JpcHQucGllY2VzLmNsb3VkIn19LCJzdGF0dXMiOnsiY2xvdWQiOiJSVU5OSU5HIn0sInByb2plY3QiOiJydW50aW1lLXVzZXItY2xvdWQtZ3JvdXAtMCIsInVwZGF0ZWQiOnsidmFsdWUiOiIyMDIyLTA2LTIzVDE4OjQ1OjQwLjM1ODk1OFoiLCJyZWFkYWJsZSI6IjIgeWVhcnMgYWdvIn0sInZlcnNpb24iOiIzLjAuMCJ9fX0=&user=c641a4c4-a91c-46b8-86d2-669642a5d985&_gl=1*10b2ooz*_gcl_au*MTU1MjQ5NDYwMi4xNzcwMTM3NzA3*_ga*MTU2Mzk3NDgzNC4xNzcwMTM3NzA3*_ga_BVYEFRWCYX*czE3NzAxMzc3MDckbzEkZzEkdDE3NzAxMzc3MjEkajQ2JGwwJGgxMzk3NDA1MDU2">
+            My Code Snippet
+        </a>
     </body>
 </html>
